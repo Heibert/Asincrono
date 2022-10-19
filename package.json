@@ -8,7 +8,10 @@
     "dev": "nodemon promises/2_axios.js",
     "needle": "nodemon promises/3_needle.js",
     "await": "nodemon await/3_needle.js",
-    "universidades": "nodemon await/prueba.js"
+    "universidades": "nodemon await/prueba.js",
+    "Evidencias_callback": "nodemon Evidencias/Anime_facts_callback.js",
+    "Evidencias_Await": "nodemon Evidencias/Fraces.Await.js",
+    "Evidencias_Promises": "nodemon Evidencias/Clima.promise.js"
   },
   "keywords": [],
   "author": "",

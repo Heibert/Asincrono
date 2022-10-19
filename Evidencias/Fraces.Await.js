@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const endpoint = 'http://universities.hipolabs.com/search?country=colombia'
+const endpoint = 'https://poetrydb.org/title/Ozymandias/lines.json'
 
 let config = {
     url: endpoint,
@@ -8,21 +8,22 @@ let config = {
 }
 function exito(response){
     const tipos = response
-    /* console.log(tipos) */
-/*      tipos.forEach(element => {
-        console.log(`Tipo: ${element.name}`)
-        console.log()
-    }); */
+    var i = 0
+     tipos.forEach(element => {
+        for (let i = 0; i < element.lines.length; i++) {
+            console.log("Frase N°",i,element.lines[i])
+            console.log()
+        }
+    });
 }
 function fallo(status){
     console.log(status)
-    console.log("Fallo")
 }
 
 const f = async ()=>{
     try {
         let response = await axios(config)
-        exito(response)
+        exito(response.data)
     } catch (error) {
         fallo(error)
     }

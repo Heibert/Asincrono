@@ -6,4 +6,3 @@ let r = request(url,{json:true},function(error, response, body){
     const json = response.body.results
     console.log(json)
 })
-
